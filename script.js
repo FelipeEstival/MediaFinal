@@ -1,5 +1,6 @@
 
 
+
 const nota1 = document.getElementById('nota_usuario1')
 const nota2 = document.getElementById('nota_usuario2')
 
@@ -9,4 +10,9 @@ function calcular(){
 
     const p = document.getElementById('resultado')
     p.textContent = `A sua média final é ${media.toFixed(1)}`
+
+    if (media < 6){
+        const aviso = document.getElementById('aviso')
+        aviso.textContent = '\u26A0 Nota abaixo da média'
+    }
 }
